@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-train
+spec:
+  template:
+    spec:
+      containers:
+      - name: model-train
+        image: model-train:default
+        command: ["python", "main-train.py"]  # Corregir la definición del comando
+        env: 
+        - name: MODEL_PATH
+          value: /model/model.npy
+      restartPolicy: Never
+  backoffLimit: 4
