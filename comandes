@@ -1,0 +1,9 @@
+CREAR IMATGE
+docker build -t model-train:default -f dockerfile-train .
+docker run -e MODEL_PATH=/model/model.npy -v /tmp:/model -p 5000:5000 model-train:default
+
+LLISTAR IMATGES
+docker images
+
+ELIMINAR IMATGES
+docker rmi imatge
