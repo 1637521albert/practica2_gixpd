@@ -11,6 +11,6 @@ spec:
         command: ["python", "main-train.py"]
         env: 
         - name: MODEL_PATH
-          value: /model/model.npy
+          value: /model
       restartPolicy: Never
   backoffLimit: 4
