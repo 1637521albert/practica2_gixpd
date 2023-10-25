@@ -11,6 +11,9 @@ spec:
         command: ["python", "main-train.py"]
         env: 
         - name: MODEL_PATH
-          value: /model
+          value: /model/model.npy
+        volumeMounts:
+        - name: volum
+          value: /tmp
       restartPolicy: Never
   backoffLimit: 4
