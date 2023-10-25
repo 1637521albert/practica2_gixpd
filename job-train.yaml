@@ -13,7 +13,7 @@ spec:
         - name: MODEL_PATH
           value: /model/model.npy
         volumeMounts:
-        - name: volum
+        - name: volume-tmp
           mountPath: /tmp
       restartPolicy: Never
   backoffLimit: 4
