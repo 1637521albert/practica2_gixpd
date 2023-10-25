@@ -4,7 +4,7 @@ metadata:
   name: mi-servicio
 spec:
   selector:
-    app: lu mateix que a la app de deployment
+    app: appxd
   ports:
     - protocol: TCP
       port: 80
