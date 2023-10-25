@@ -7,3 +7,6 @@ docker images
 
 ELIMINAR IMATGES
 docker rmi imatge
+
+EXECUTAR KUBERNETES
+kubectl apply -f job-train.yaml
