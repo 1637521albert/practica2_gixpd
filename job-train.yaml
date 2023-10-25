@@ -15,7 +15,7 @@ spec:
       volumes:
       - name: volume-tmp
         hostPath: 
-        - path: /tmp
-          type: Directory
+         path: /tmp
+         type: Directory
       restartPolicy: Never
   backoffLimit: 4
