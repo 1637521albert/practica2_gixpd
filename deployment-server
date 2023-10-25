@@ -9,5 +9,6 @@ spec:
       containers:
       - name: model-server
         image: model-server:default
-        ports:
-        - containerPort: 80
+      volumeMounts:
+      - name: volume-tmp
+        mountPath: /tmp
