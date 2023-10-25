@@ -12,4 +12,7 @@ EXECUTAR KUBERNETES
 kubectl apply -f job-train.yaml
 
 CARRERGAR IMATGE A MINIKUBE
+eval $(minikube docker-env)
+docker build -t model-train:default -f dockerfile-train .
+docker build -t model-service:default -f dockerfile-service .
 minikube image load model-train:default
