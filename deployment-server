@@ -12,6 +12,8 @@ spec:
       containers:
       - name: model-server
         image: model-server:default
-      volumeMounts:
+      volumes:
       - name: volume-tmp
-        mountPath: /tmp
+        hostPath: 
+         path: /tmp
+         type: Directory
