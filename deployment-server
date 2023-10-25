@@ -4,10 +4,13 @@ metadata:
   name: server-deployment
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: appxd
   template:
     metadata:
       labels:
-        app: model-server
+        app: appxd
     spec:
       containers:
       - name: model-server
