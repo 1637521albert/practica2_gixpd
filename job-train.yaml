@@ -12,8 +12,10 @@ spec:
         env: 
         - name: MODEL_PATH
           value: /model/model.npy
-        volumeMounts:
-        - name: volume-tmp
-          mountPath: /tmp
+      volumes:
+      - name: volume-tmp
+        hostPath: 
+        - path: /tmp
+          type: Directory
       restartPolicy: Never
   backoffLimit: 4
