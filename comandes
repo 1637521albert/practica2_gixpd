@@ -10,3 +10,6 @@ docker rmi imatge
 
 EXECUTAR KUBERNETES
 kubectl apply -f job-train.yaml
+
+CARRERGAR IMATGE A MINIKUBE
+minikube image load model-train:default
